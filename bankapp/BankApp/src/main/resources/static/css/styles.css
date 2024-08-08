@@ -1,0 +1,78 @@
+body {
+	background-color: #ddd !important;
+}
+
+body .loginPanel{
+	border: solid 1px #ddd;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	text-align: center;
+	vertical-align: center; 
+	margin-top: 200px;
+	padding-top: 50px;
+}
+
+body .loginTable {
+	margin: 0 auto;
+	vertical-align: center;
+	font-size: 20px;
+	line-height: 80px;
+	margin-top: 25px;
+}
+
+table td.fieldLabel {
+	float: right;
+}
+
+table thead {
+	font-weight: bold;
+}
+
+body {
+	background-color: #dddd;
+}
+
+body .newCustomerPanel{
+	border: solid 1px #ddd;
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+	text-align: center;
+	vertical-align: center; 
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+body .newCustomerTable {
+	margin: 0 auto;
+	vertical-align: center;
+	font-size: 20px;
+	line-height: 80px;
+	margin-top: 50px;
+}
+
+body .viewCustomerPanel{
+	border: solid 1px #ddd;
+	width: 80%;
+	height: 800px;
+	margin: auto;
+	text-align: center;
+	vertical-align: center; 
+	margin-top: 50px;
+	padding-top: 50px;
+	overflow-y: scroll;
+}
+
+body .viewCustomerTable {
+	margin: 0 auto;
+	vertical-align: center;
+	font-size: 20px;
+	line-height: 80px;
+	margin-top: 50px;
+}
+
+.result {
+	color:green;
+	font-weight: bold;	
+}

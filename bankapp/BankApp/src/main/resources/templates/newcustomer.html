@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+<script type="text/javascript" th:src="@{/js/main.js}" ></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+</head>
+<body>
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+				aria-controls="navbarTogglerDemo01" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<a class="navbar-brand" href="/home">Bank Application</a>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link"
+						aria-current="page" href="/newcustomer">New Customer</a></li>
+					<li class="nav-item"><a class="nav-link" href="/viewcustomer">View
+							Customers</a></li>
+				</ul>
+				<button class="btn btn-outline-success" onclick="logout()">Logout</button>
+			</div>
+		</div>
+	</nav>
+	<div class="newCustomerPanel card">
+		<h1>New Customer</h1>
+		<form id="f" action="/newcustomer" method="POST">
+			<table id="t1" border="0" class="newCustomerTable">
+				<tbody>
+					<tr>
+						<td class="fieldLabel">Customer CIF No: &nbsp</td>
+						<td><input type="text" id="customerNo" name="customerNo"
+							class="form-control mb-8 col-12" /></td>
+						<td class="fieldLabel">Aadhaar No: &nbsp</td>
+						<td><input type="text" id="aadhaarNo" name="aadhaarNo"
+							class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Customer Account No: &nbsp</td>
+						<td><input type="text" id="customerAccNo"
+							name="customerAccNo" class="form-control mb-8 col-12" /></td>
+						<td class="fieldLabel">PAN No: &nbsp</td>
+						<td><input type="text" id="panNo" name="panNo"
+							class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Name: &nbsp</td>
+						<td><input type="text" id="customerName" name="customerName"
+							class="form-control mb-8 col-12" /></td>
+						<td class="fieldLabel">Address: &nbsp</td>
+						<td><input type="text" id="address" name="address"
+							class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">DOB: &nbsp</td>
+						<td><input type="date" id="dob" name="dob"
+							class="form-control mb-8 col-12" /></td>
+						<td class="fieldLabel">Father Name: &nbsp</td>
+						<td><input type="text" id="fatherName" name="fatherName"
+							class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Qualification: &nbsp</td>
+						<td><input type="text" id="qualification"
+							name="qualification" class="form-control mb-8 col-12" /></td>
+						<td class="fieldLabel">Mother Name: &nbsp</td>
+						<td><input type="text" id="motherName" name="motherName"
+							class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Gender: &nbsp</td>
+						<td><input type="radio" id="male" name="gender"
+							class="" value="M" checked/>&nbsp Male <input type="radio" id="female" name="gender"
+							class="" value="F"/>&nbsp Female</td>
+						<td class="fieldLabel">&nbsp&nbspGuardian/Spouse Name: &nbsp</td>
+						<td><input type="text" id="guardianName"
+							name="guardianName" class="form-control mb-8 col-12" /></td>
+					</tr>
+					<tr>
+						<td colspan="4"><input type="submit" id="submit"
+							value="Add Customer" class="btn btn-primary" /></td>
+					</tr>
+					<th:block th:if="${response == 'Record Added'}">
+				<tr><td colspan="4" class="result">Customer Created Successfully..</td></tr>
+				</th:block>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</body>
